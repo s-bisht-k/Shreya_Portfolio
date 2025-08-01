@@ -3,13 +3,17 @@ import { GraduationCap, Heart, Target } from "lucide-react";
 
 const About = () => {
   return (
-    <section id="about" className="py-20 bg-background">
-      <div className="container mx-auto px-6">
+    <section id="about" className="py-20 bg-background relative overflow-hidden">
+      {/* Floating background elements */}
+      <div className="absolute top-20 left-10 w-32 h-32 bg-primary/10 rounded-full blur-2xl float-animation"></div>
+      <div className="absolute bottom-20 right-10 w-40 h-40 bg-accent-blue/10 rounded-full blur-2xl float-animation" style={{animationDelay: '2s'}}></div>
+      
+      <div className="container mx-auto px-6 relative z-10">
         <div className="text-center mb-16">
-          <h2 className="text-4xl lg:text-5xl font-bold mb-6 bg-gradient-to-r from-primary to-primary-glow bg-clip-text text-transparent">
+          <h2 className="text-4xl lg:text-5xl font-bold mb-6 bg-gradient-to-r from-primary via-primary-glow to-accent-blue bg-clip-text text-transparent animated-gradient">
             About Me
           </h2>
-          <div className="w-24 h-1 bg-primary-gradient mx-auto rounded-full"></div>
+          <div className="w-24 h-1 bg-primary-gradient mx-auto rounded-full pulse-glow"></div>
         </div>
         
         <div className="grid md:grid-cols-2 gap-12 items-center">
@@ -35,28 +39,28 @@ const About = () => {
           </div>
           
           <div className="space-y-6">
-            <Card className="bg-card-gradient border-border hover:shadow-glow transition-all duration-300">
+            <Card className="glass-card hover-float border-primary/20 backdrop-blur-xl">
               <CardContent className="p-6">
                 <div className="flex items-center gap-4 mb-4">
-                  <div className="p-3 bg-primary/20 rounded-lg">
+                  <div className="p-3 bg-primary/30 rounded-xl backdrop-blur-sm pulse-glow">
                     <Heart className="w-6 h-6 text-primary-glow" />
                   </div>
                   <h3 className="text-xl font-semibold">Interests</h3>
                 </div>
                 <ul className="text-muted-foreground space-y-2">
-                  <li>• Machine Learning & AI</li>
-                  <li>• Web Development</li>
-                  <li>• Generative AI & LLMs</li>
-                  <li>• Computer Vision</li>
-                  <li>• Data Science</li>
+                  <li className="hover:text-primary transition-colors">• Machine Learning & AI</li>
+                  <li className="hover:text-primary transition-colors">• Web Development</li>
+                  <li className="hover:text-primary transition-colors">• Generative AI & LLMs</li>
+                  <li className="hover:text-primary transition-colors">• Computer Vision</li>
+                  <li className="hover:text-primary transition-colors">• Data Science</li>
                 </ul>
               </CardContent>
             </Card>
             
-            <Card className="bg-card-gradient border-border hover:shadow-glow transition-all duration-300">
+            <Card className="glass-card hover-float border-accent-blue/20 backdrop-blur-xl">
               <CardContent className="p-6">
                 <div className="flex items-center gap-4 mb-4">
-                  <div className="p-3 bg-accent-blue/20 rounded-lg">
+                  <div className="p-3 bg-accent-blue/30 rounded-xl backdrop-blur-sm pulse-glow" style={{animationDelay: '1s'}}>
                     <Target className="w-6 h-6 text-accent-blue" />
                   </div>
                   <h3 className="text-xl font-semibold">Goals</h3>

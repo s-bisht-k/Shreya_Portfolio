@@ -70,12 +70,28 @@ export default {
 			backgroundImage: {
 				'hero-gradient': 'var(--hero-gradient)',
 				'card-gradient': 'var(--card-gradient)',
+				'glass-gradient': 'var(--glass-gradient)',
 				'primary-gradient': 'var(--primary-gradient)'
 			},
 			boxShadow: {
 				'glow': 'var(--shadow-glow)',
 				'card': 'var(--shadow-card)',
-				'elegant': 'var(--shadow-elegant)'
+				'elegant': 'var(--shadow-elegant)',
+				'glass': 'var(--shadow-glass)'
+			},
+			backdropBlur: {
+				'xs': '2px',
+				'sm': '4px',
+				'lg': '16px',
+				'xl': '24px',
+				'2xl': '40px',
+				'3xl': '64px'
+			},
+			transitionTimingFunction: {
+				'smooth': 'cubic-bezier(0.25, 0.46, 0.45, 0.94)',
+				'bounce': 'cubic-bezier(0.68, -0.55, 0.265, 1.55)',
+				'elastic': 'cubic-bezier(0.175, 0.885, 0.32, 1.275)',
+				'cinematic': 'cubic-bezier(0.23, 1, 0.32, 1)'
 			},
 			borderRadius: {
 				lg: 'var(--radius)',

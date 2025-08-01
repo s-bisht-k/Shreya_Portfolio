@@ -26,13 +26,17 @@ const Projects = () => {
   ];
 
   return (
-    <section id="projects" className="py-20 bg-secondary/20">
-      <div className="container mx-auto px-6">
+    <section id="projects" className="py-20 bg-secondary/20 relative overflow-hidden">
+      {/* Floating project elements */}
+      <div className="absolute top-16 left-16 w-32 h-32 bg-accent-blue/10 rounded-full blur-2xl float-animation"></div>
+      <div className="absolute bottom-16 right-16 w-40 h-40 bg-primary/10 rounded-full blur-2xl float-animation" style={{animationDelay: '2s'}}></div>
+      
+      <div className="container mx-auto px-6 relative z-10">
         <div className="text-center mb-16">
-          <h2 className="text-4xl lg:text-5xl font-bold mb-6 bg-gradient-to-r from-primary to-accent-blue bg-clip-text text-transparent">
+          <h2 className="text-4xl lg:text-5xl font-bold mb-6 bg-gradient-to-r from-primary via-accent-blue to-accent-purple bg-clip-text text-transparent animated-gradient">
             Featured Projects
           </h2>
-          <div className="w-24 h-1 bg-primary-gradient mx-auto rounded-full mb-4"></div>
+          <div className="w-24 h-1 bg-primary-gradient mx-auto rounded-full mb-4 pulse-glow"></div>
           <p className="text-muted-foreground text-lg max-w-2xl mx-auto">
             Innovative solutions combining AI, Machine Learning, and modern web technologies
           </p>
@@ -42,7 +46,7 @@ const Projects = () => {
           {projects.map((project, index) => (
             <Card 
               key={project.title} 
-              className="bg-card-gradient border-border hover:shadow-elegant transition-all duration-500 transform hover:-translate-y-2 group"
+              className="glass-card hover-float border-primary/20 backdrop-blur-xl group overflow-hidden"
             >
               <CardHeader className="pb-4">
                 <div className="flex items-center gap-4 mb-4">
