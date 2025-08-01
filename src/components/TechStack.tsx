@@ -3,6 +3,7 @@ import { Badge } from "@/components/ui/badge";
 const TechStack = () => {
   const technologies = [
     // Programming Languages
+    { name: "C", category: "Programming" },
     { name: "C++", category: "Programming" },
     { name: "Java", category: "Programming" },
     { name: "JavaScript", category: "Programming" },
@@ -11,6 +12,9 @@ const TechStack = () => {
     // Web Technologies
     { name: "HTML", category: "Web" },
     { name: "CSS", category: "Web" },
+    { name: "React", category: "Web" },
+    { name: "Node.js", category: "Web" },
+    { name: "Tailwind CSS", category: "Web" },
     { name: "Bootstrap", category: "Web" },
     
     // Tools & Version Control
@@ -21,6 +25,7 @@ const TechStack = () => {
     { name: "Excel", category: "Tools" },
     
     // AI/ML Technologies
+    { name: "Gen AI", category: "AI/ML" },
     { name: "OpenCV", category: "AI/ML" },
     { name: "DeepFace", category: "AI/ML" },
     { name: "TensorFlow", category: "AI/ML" },

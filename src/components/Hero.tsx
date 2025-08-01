@@ -33,10 +33,10 @@ const Hero = () => {
                 variant="hero" 
                 size="lg" 
                 className="group"
-                onClick={() => window.open('#', '_blank')}
+                onClick={() => window.open('https://drive.google.com/drive/folders/1M2w1B12Hei3AHXGINHLogJNd1TndXl_l', '_blank')}
               >
                 <Download className="w-5 h-5 group-hover:animate-bounce" />
-                Download Resume
+                Download CV
               </Button>
               <Button 
                 variant="glow" 
