@@ -65,21 +65,22 @@ const Hero = () => {
             </div>
           </div>
           
-          {/* Cinematic Profile Image */}
+          {/* 3D Profile Image */}
           <div className="flex-shrink-0">
-            <div className="relative group">
-              <div className="w-64 h-64 sm:w-80 sm:h-80 lg:w-96 lg:h-96 rounded-full overflow-hidden glass-card hover-float group mx-auto">
+            <div className="relative group perspective-1000">
+              <div className="w-64 h-64 sm:w-80 sm:h-80 lg:w-96 lg:h-96 rounded-full overflow-hidden glass-card group mx-auto transform-3d hover:rotate-y-12 hover:rotate-x-6 transition-all duration-700 ease-cinematic shadow-3d">
                 <img 
                   src={profileImage} 
                   alt="Shreya Bisht" 
-                  className="w-full h-full object-cover transform group-hover:scale-110 transition-all duration-700 ease-cinematic"
+                  className="w-full h-full object-cover object-center transform group-hover:scale-110 transition-all duration-700 ease-cinematic filter brightness-110 contrast-110"
                 />
                 <div className="absolute inset-0 bg-primary-gradient opacity-0 group-hover:opacity-20 transition-opacity duration-500"></div>
+                <div className="absolute inset-0 rounded-full border-2 border-primary/30 group-hover:border-primary/60 transition-colors duration-500"></div>
               </div>
-              {/* Glowing orbs around image */}
-              <div className="absolute -inset-4 sm:-inset-8 bg-primary-gradient rounded-full opacity-30 blur-2xl pulse-glow"></div>
-              <div className="absolute -top-2 -right-2 sm:-top-4 sm:-right-4 w-12 h-12 sm:w-16 sm:h-16 bg-accent-cyan/40 rounded-full blur-xl float-animation"></div>
-              <div className="absolute -bottom-2 -left-2 sm:-bottom-4 sm:-left-4 w-8 h-8 sm:w-12 sm:h-12 bg-accent-purple/40 rounded-full blur-xl float-animation" style={{animationDelay: '1.5s'}}></div>
+              {/* Enhanced 3D Glowing Effects */}
+              <div className="absolute -inset-6 sm:-inset-10 bg-primary-gradient rounded-full opacity-20 blur-3xl pulse-glow transform-3d translate-z-[-50px]"></div>
+              <div className="absolute -top-4 -right-4 sm:-top-6 sm:-right-6 w-16 h-16 sm:w-20 sm:h-20 bg-accent-cyan/30 rounded-full blur-2xl float-animation transform-3d translate-z-[30px]"></div>
+              <div className="absolute -bottom-4 -left-4 sm:-bottom-6 sm:-left-6 w-12 h-12 sm:w-16 sm:h-16 bg-accent-purple/30 rounded-full blur-2xl float-animation transform-3d translate-z-[20px]" style={{animationDelay: '1.5s'}}></div>
             </div>
           </div>
         </div>

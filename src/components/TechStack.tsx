@@ -3,43 +3,42 @@ import { Badge } from "@/components/ui/badge";
 const TechStack = () => {
   const technologies = [
     // Programming Languages
-    { name: "C", category: "Programming", icon: "🔷" },
-    { name: "C++", category: "Programming", icon: "🔶" },
-    { name: "Java", category: "Programming", icon: "☕" },
-    { name: "JavaScript", category: "Programming", icon: "🟨" },
-    { name: "SQL", category: "Database", icon: "🗄️" },
+    { name: "C", category: "Programming", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/c/c-original.svg" },
+    { name: "C++", category: "Programming", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/cplusplus/cplusplus-original.svg" },
+    { name: "Java", category: "Programming", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg" },
+    { name: "JavaScript", category: "Programming", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" },
+    { name: "SQL", category: "Database", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg" },
     
     // Web Technologies
-    { name: "HTML", category: "Web", icon: "🔴" },
-    { name: "CSS", category: "Web", icon: "🔵" },
-    { name: "React", category: "Web", icon: "⚛️" },
-    { name: "Node.js", category: "Web", icon: "🟢" },
-    { name: "Tailwind CSS", category: "Web", icon: "🌊" },
-    { name: "Bootstrap", category: "Web", icon: "🎨" },
+    { name: "HTML", category: "Web", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" },
+    { name: "CSS", category: "Web", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" },
+    { name: "React", category: "Web", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" },
+    { name: "Node.js", category: "Web", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg" },
+    { name: "Tailwind CSS", category: "Web", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tailwindcss/tailwindcss-plain.svg" },
+    { name: "Bootstrap", category: "Web", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/bootstrap/bootstrap-original.svg" },
     
     // Tools & Version Control
-    { name: "Git", category: "Tools", icon: "📦" },
-    { name: "GitHub", category: "Tools", icon: "🐙" },
-    { name: "VS Code", category: "Tools", icon: "💻" },
-    { name: "Google Colab", category: "Tools", icon: "📊" },
-    { name: "Excel", category: "Tools", icon: "📈" },
+    { name: "Git", category: "Tools", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg" },
+    { name: "GitHub", category: "Tools", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg" },
+    { name: "VS Code", category: "Tools", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vscode/vscode-original.svg" },
+    { name: "Google Colab", category: "Tools", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/google/google-original.svg" },
+    { name: "Excel", category: "Tools", icon: "https://img.icons8.com/color/48/microsoft-excel-2019.png" },
     
     // AI/ML Technologies
-    { name: "Gen AI", category: "AI/ML", icon: "🤖" },
-    { name: "OpenCV", category: "AI/ML", icon: "👁️" },
-    { name: "DeepFace", category: "AI/ML", icon: "🎭" },
-    { name: "TensorFlow", category: "AI/ML", icon: "🧠" },
-    { name: "Keras", category: "AI/ML", icon: "🔥" },
-    { name: "NumPy", category: "AI/ML", icon: "🔢" },
-    { name: "Matplotlib", category: "AI/ML", icon: "📊" },
+    { name: "TensorFlow", category: "AI/ML", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tensorflow/tensorflow-original.svg" },
+    { name: "OpenCV", category: "AI/ML", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/opencv/opencv-original.svg" },
+    { name: "NumPy", category: "AI/ML", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/numpy/numpy-original.svg" },
+    { name: "Python", category: "AI/ML", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" },
+    { name: "Pandas", category: "AI/ML", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/pandas/pandas-original.svg" },
+    { name: "Matplotlib", category: "AI/ML", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/matplotlib/matplotlib-original.svg" },
   ];
 
   const categories = [
-    { name: "Programming", color: "bg-primary/20 text-primary-glow" },
-    { name: "Web", color: "bg-accent-blue/20 text-accent-blue" },
-    { name: "AI/ML", color: "bg-accent-purple/20 text-accent-purple" },
-    { name: "Tools", color: "bg-muted text-muted-foreground" },
-    { name: "Database", color: "bg-primary-glow/20 text-primary-glow" },
+    { name: "Programming", color: "bg-primary/20 text-primary" },
+    { name: "Web", color: "bg-primary/20 text-primary" },
+    { name: "AI/ML", color: "bg-primary/20 text-primary" },
+    { name: "Tools", color: "bg-primary/20 text-primary" },
+    { name: "Database", color: "bg-primary/20 text-primary" },
   ];
 
   return (
@@ -69,19 +68,29 @@ const TechStack = () => {
                 <div className="flex-1 h-px bg-gradient-to-r from-transparent via-border to-transparent"></div>
               </div>
               
-                <div className="flex flex-wrap gap-3">
-                {technologies
-                  .filter((tech) => tech.category === category.name)
-                  .map((tech, index) => (
-                    <Badge 
-                      key={tech.name} 
-                      variant="tech" 
-                      className="text-sm py-2 px-4 cursor-pointer glass-card transition-all duration-300"
-                    >
-                      <span className="text-lg mr-2">{tech.icon}</span>
-                      {tech.name}
-                    </Badge>
-                  ))}
+                <div className="relative overflow-hidden">
+                  <div className="flex gap-3 animate-slide-infinite">
+                    {technologies
+                      .filter((tech) => tech.category === category.name)
+                      .concat(technologies.filter((tech) => tech.category === category.name))
+                      .map((tech, index) => (
+                        <Badge 
+                          key={`${tech.name}-${index}`} 
+                          variant="tech" 
+                          className="text-sm py-3 px-5 cursor-pointer glass-card transition-all duration-300 flex-shrink-0 min-w-fit"
+                        >
+                          <img 
+                            src={tech.icon} 
+                            alt={tech.name}
+                            className="w-6 h-6 mr-3"
+                            onError={(e) => {
+                              e.currentTarget.style.display = 'none';
+                            }}
+                          />
+                          {tech.name}
+                        </Badge>
+                      ))}
+                  </div>
                 </div>
             </div>
           ))}

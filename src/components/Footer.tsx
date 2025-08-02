@@ -22,11 +22,11 @@ const Footer = () => {
   return (
     <footer className="bg-secondary/30 border-t border-border">
       <div className="container mx-auto px-6 py-12">
-        <div className="grid md:grid-cols-2 gap-8 items-center">
+        <div className="text-center">
           {/* Quick Navigation */}
-          <div className="text-center md:text-left">
+          <div className="mb-8">
             <h4 className="font-semibold text-foreground mb-4">Quick Links</h4>
-            <div className="flex flex-wrap justify-center md:justify-start gap-4">
+            <div className="flex flex-wrap justify-center gap-4">
               {quickLinks.map((link) => (
                 <Button
                   key={link.name}
@@ -42,7 +42,7 @@ const Footer = () => {
           </div>
           
           {/* Back to Top */}
-          <div className="text-center md:text-right">
+          <div>
             <Button
               variant="glow"
               size="icon"

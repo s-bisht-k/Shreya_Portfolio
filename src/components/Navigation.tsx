@@ -42,7 +42,7 @@ const Navigation = () => {
           <div className="flex-shrink-0">
             <button 
               onClick={() => scrollToSection('#hero')}
-              className="text-xl sm:text-2xl font-bold bg-gradient-to-r from-primary to-accent-cyan bg-clip-text text-transparent hover:scale-105 transition-transform"
+              className="text-xl sm:text-2xl font-bold text-foreground hover:text-primary transition-colors tracking-wide"
             >
               Portfolio
             </button>
