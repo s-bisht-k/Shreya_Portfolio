@@ -4,7 +4,7 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Label } from "@/components/ui/label";
-import { Mail, Phone, Send, Linkedin, Github, Code } from "lucide-react";
+import { Mail, Phone, Send, Linkedin, Github, Code, Download } from "lucide-react";
 import { useToast } from "@/hooks/use-toast";
 
 const Contact = () => {
@@ -138,9 +138,9 @@ const Contact = () => {
                   variant="hero" 
                   size="lg" 
                   className="w-full"
-                  onClick={() => window.open('#', '_blank')}
+                  onClick={() => window.open('https://drive.google.com/drive/folders/1M2w1B12Hei3AHXGINHLogJNd1TndXl_l', '_blank')}
                 >
-                  <Mail className="w-5 h-5" />
+                  <Download className="w-5 h-5" />
                   Download Resume
                 </Button>
               </CardContent>

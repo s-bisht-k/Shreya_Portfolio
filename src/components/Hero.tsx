@@ -12,14 +12,36 @@ const Hero = () => {
   ];
   
   const [currentTitleIndex, setCurrentTitleIndex] = useState(0);
+  const [displayText, setDisplayText] = useState("");
+  const [isTyping, setIsTyping] = useState(true);
   
   useEffect(() => {
-    const interval = setInterval(() => {
-      setCurrentTitleIndex((prev) => (prev + 1) % titles.length);
-    }, 2500);
+    const currentTitle = titles[currentTitleIndex];
+    let timeout: NodeJS.Timeout;
     
-    return () => clearInterval(interval);
-  }, []);
+    if (isTyping) {
+      if (displayText.length < currentTitle.length) {
+        timeout = setTimeout(() => {
+          setDisplayText(currentTitle.slice(0, displayText.length + 1));
+        }, 100);
+      } else {
+        timeout = setTimeout(() => {
+          setIsTyping(false);
+        }, 2000);
+      }
+    } else {
+      if (displayText.length > 0) {
+        timeout = setTimeout(() => {
+          setDisplayText(displayText.slice(0, -1));
+        }, 50);
+      } else {
+        setCurrentTitleIndex((prev) => (prev + 1) % titles.length);
+        setIsTyping(true);
+      }
+    }
+    
+    return () => clearTimeout(timeout);
+  }, [displayText, isTyping, currentTitleIndex, titles]);
 
   return (
     <section id="hero" className="min-h-screen flex items-center justify-center bg-hero-gradient relative overflow-hidden pt-16">
@@ -42,8 +64,9 @@ const Hero = () => {
               Shreya Bisht
             </h1>
             <div className="text-lg sm:text-xl md:text-2xl lg:text-3xl text-muted-foreground mb-4 sm:mb-6 h-16 sm:h-20 flex items-center justify-center lg:justify-start">
-              <p className="text-primary-glow font-semibold animate-fade-in transition-all duration-500">
-                {titles[currentTitleIndex]}
+              <p className="text-primary-glow font-semibold">
+                {displayText}
+                <span className="animate-pulse">|</span>
               </p>
             </div>
             <p className="text-sm sm:text-base lg:text-lg text-muted-foreground mb-6 sm:mb-8 max-w-2xl leading-relaxed px-2 lg:px-0 mx-auto lg:mx-0">
