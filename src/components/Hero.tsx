@@ -1,8 +1,26 @@
 import { Button } from "@/components/ui/button";
 import { Download, Mail, ExternalLink } from "lucide-react";
+import { useState, useEffect } from "react";
 import profileImage from "@/assets/shreya-profile-new.jpg";
 
 const Hero = () => {
+  const titles = [
+    "Software Developer",
+    "Web Developer", 
+    "Generative AI Explorer",
+    "ML Enthusiast"
+  ];
+  
+  const [currentTitleIndex, setCurrentTitleIndex] = useState(0);
+  
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrentTitleIndex((prev) => (prev + 1) % titles.length);
+    }, 2500);
+    
+    return () => clearInterval(interval);
+  }, []);
+
   return (
     <section id="hero" className="min-h-screen flex items-center justify-center bg-hero-gradient relative overflow-hidden pt-16">
       {/* Cinematic Background Effects */}
@@ -23,9 +41,10 @@ const Hero = () => {
             <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-bold mb-4 sm:mb-6 bg-gradient-to-r from-foreground via-primary-glow to-accent-cyan bg-clip-text text-transparent">
               Shreya Bisht
             </h1>
-            <div className="text-lg sm:text-xl md:text-2xl lg:text-3xl text-muted-foreground mb-4 sm:mb-6 space-y-1 sm:space-y-2">
-              <p className="text-primary-glow font-semibold">Software Engineer</p>
-              <p className="text-accent-cyan font-semibold">Machine Learning Engineer</p>
+            <div className="text-lg sm:text-xl md:text-2xl lg:text-3xl text-muted-foreground mb-4 sm:mb-6 h-16 sm:h-20 flex items-center justify-center lg:justify-start">
+              <p className="text-primary-glow font-semibold animate-fade-in transition-all duration-500">
+                {titles[currentTitleIndex]}
+              </p>
             </div>
             <p className="text-sm sm:text-base lg:text-lg text-muted-foreground mb-6 sm:mb-8 max-w-2xl leading-relaxed px-2 lg:px-0 mx-auto lg:mx-0">
               Passionate Computer Science student building innovative solutions with 
