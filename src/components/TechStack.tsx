@@ -3,35 +3,35 @@ import { Badge } from "@/components/ui/badge";
 const TechStack = () => {
   const technologies = [
     // Programming Languages
-    { name: "C", category: "Programming" },
-    { name: "C++", category: "Programming" },
-    { name: "Java", category: "Programming" },
-    { name: "JavaScript", category: "Programming" },
-    { name: "SQL", category: "Database" },
+    { name: "C", category: "Programming", icon: "🔷" },
+    { name: "C++", category: "Programming", icon: "🔶" },
+    { name: "Java", category: "Programming", icon: "☕" },
+    { name: "JavaScript", category: "Programming", icon: "🟨" },
+    { name: "SQL", category: "Database", icon: "🗄️" },
     
     // Web Technologies
-    { name: "HTML", category: "Web" },
-    { name: "CSS", category: "Web" },
-    { name: "React", category: "Web" },
-    { name: "Node.js", category: "Web" },
-    { name: "Tailwind CSS", category: "Web" },
-    { name: "Bootstrap", category: "Web" },
+    { name: "HTML", category: "Web", icon: "🔴" },
+    { name: "CSS", category: "Web", icon: "🔵" },
+    { name: "React", category: "Web", icon: "⚛️" },
+    { name: "Node.js", category: "Web", icon: "🟢" },
+    { name: "Tailwind CSS", category: "Web", icon: "🌊" },
+    { name: "Bootstrap", category: "Web", icon: "🎨" },
     
     // Tools & Version Control
-    { name: "Git", category: "Tools" },
-    { name: "GitHub", category: "Tools" },
-    { name: "VS Code", category: "Tools" },
-    { name: "Google Colab", category: "Tools" },
-    { name: "Excel", category: "Tools" },
+    { name: "Git", category: "Tools", icon: "📦" },
+    { name: "GitHub", category: "Tools", icon: "🐙" },
+    { name: "VS Code", category: "Tools", icon: "💻" },
+    { name: "Google Colab", category: "Tools", icon: "📊" },
+    { name: "Excel", category: "Tools", icon: "📈" },
     
     // AI/ML Technologies
-    { name: "Gen AI", category: "AI/ML" },
-    { name: "OpenCV", category: "AI/ML" },
-    { name: "DeepFace", category: "AI/ML" },
-    { name: "TensorFlow", category: "AI/ML" },
-    { name: "Keras", category: "AI/ML" },
-    { name: "NumPy", category: "AI/ML" },
-    { name: "Matplotlib", category: "AI/ML" },
+    { name: "Gen AI", category: "AI/ML", icon: "🤖" },
+    { name: "OpenCV", category: "AI/ML", icon: "👁️" },
+    { name: "DeepFace", category: "AI/ML", icon: "🎭" },
+    { name: "TensorFlow", category: "AI/ML", icon: "🧠" },
+    { name: "Keras", category: "AI/ML", icon: "🔥" },
+    { name: "NumPy", category: "AI/ML", icon: "🔢" },
+    { name: "Matplotlib", category: "AI/ML", icon: "📊" },
   ];
 
   const categories = [
@@ -69,20 +69,20 @@ const TechStack = () => {
                 <div className="flex-1 h-px bg-gradient-to-r from-transparent via-border to-transparent"></div>
               </div>
               
-              <div className="flex flex-wrap gap-3">
+                <div className="flex flex-wrap gap-3">
                 {technologies
                   .filter((tech) => tech.category === category.name)
                   .map((tech, index) => (
                     <Badge 
                       key={tech.name} 
                       variant="tech" 
-                      className="text-sm py-2 px-4 cursor-pointer hover-glow glass-card transition-all duration-300 hover:scale-105"
-                      style={{animationDelay: `${index * 0.1}s`}}
+                      className="text-sm py-2 px-4 cursor-pointer glass-card transition-all duration-300"
                     >
+                      <span className="text-lg mr-2">{tech.icon}</span>
                       {tech.name}
                     </Badge>
                   ))}
-              </div>
+                </div>
             </div>
           ))}
         </div>

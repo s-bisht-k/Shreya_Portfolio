@@ -20,11 +20,11 @@ const Hero = () => {
         <div className="flex flex-col lg:flex-row items-center gap-8 lg:gap-20">
           {/* Text Content */}
           <div className="flex-1 text-center lg:text-left">
-            <h1 className="text-4xl sm:text-5xl lg:text-7xl font-bold mb-6 bg-gradient-to-r from-foreground via-primary-glow to-accent-cyan bg-clip-text text-transparent">
+            <h1 className="text-5xl sm:text-6xl lg:text-8xl font-bold mb-6 bg-gradient-to-r from-foreground via-primary-glow to-accent-cyan bg-clip-text text-transparent">
               Shreya Bisht
             </h1>
-            <div className="text-lg sm:text-xl lg:text-2xl text-muted-foreground mb-6 space-y-2">
-              <p className="text-primary-glow font-semibold">Software Developer</p>
+            <div className="text-xl sm:text-2xl lg:text-3xl text-muted-foreground mb-6 space-y-2">
+              <p className="text-primary-glow font-semibold">Software Engineer</p>
               <p className="text-accent-cyan font-semibold">Machine Learning Engineer</p>
             </div>
             <p className="text-base sm:text-lg text-muted-foreground mb-8 max-w-2xl leading-relaxed px-4 lg:px-0">
@@ -38,17 +38,16 @@ const Hero = () => {
               <Button 
                 variant="hero" 
                 size="lg" 
-                className="group hover-glow relative overflow-hidden"
+                className="group relative overflow-hidden"
                 onClick={() => window.open('https://drive.google.com/drive/folders/1M2w1B12Hei3AHXGINHLogJNd1TndXl_l', '_blank')}
               >
-                <div className="absolute inset-0 bg-primary-gradient opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
-                <Download className="w-5 h-5 group-hover:animate-bounce relative z-10" />
+                <Download className="w-5 h-5 relative z-10" />
                 <span className="relative z-10">Download CV</span>
               </Button>
               <Button 
                 variant="glow" 
                 size="lg"
-                className="hover-float glass-button"
+                className="glass-button"
                 onClick={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })}
               >
                 <Mail className="w-5 h-5" />
@@ -57,7 +56,7 @@ const Hero = () => {
               <Button 
                 variant="ghost" 
                 size="lg"
-                className="hover-float glass-button border-primary/30 hover:border-primary/60"
+                className="glass-button border-primary/30 hover:border-primary/60"
                 onClick={() => document.getElementById('projects')?.scrollIntoView({ behavior: 'smooth' })}
               >
                 <ExternalLink className="w-5 h-5" />

@@ -222,15 +222,7 @@
     50% { transform: translateY(-15px); }
   }
 
-  /* Slower Pulse glow effect */
-  .pulse-glow {
-    animation: pulse-glow 12s ease-in-out infinite alternate;
-  }
-
-  @keyframes pulse-glow {
-    from { box-shadow: 0 0 15px hsl(260 80% 65% / 0.3); }
-    to { box-shadow: 0 0 30px hsl(260 80% 65% / 0.6); }
-  }
+  /* Remove pulse glow effect - no animations on buttons */
 
   /* Smooth reveal animations */
   .reveal {

@@ -44,7 +44,7 @@ const Navigation = () => {
               onClick={() => scrollToSection('#hero')}
               className="text-xl sm:text-2xl font-bold bg-gradient-to-r from-primary to-accent-cyan bg-clip-text text-transparent hover:scale-105 transition-transform"
             >
-              Shreya Bisht
+              Portfolio
             </button>
           </div>
 
