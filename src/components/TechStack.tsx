@@ -43,18 +43,18 @@ const TechStack = () => {
   ];
 
   return (
-    <section id="tech-stack" className="py-20 bg-secondary/20 relative overflow-hidden">
+    <section id="tech-stack" className="py-12 sm:py-20 bg-secondary/20 relative overflow-hidden">
       {/* Floating tech elements */}
       <div className="absolute top-10 right-20 w-20 h-20 bg-accent-purple/10 rounded-full blur-xl float-animation"></div>
       <div className="absolute bottom-10 left-20 w-24 h-24 bg-primary/10 rounded-full blur-xl float-animation" style={{animationDelay: '3s'}}></div>
       
-      <div className="container mx-auto px-6 relative z-10">
-        <div className="text-center mb-16">
-          <h2 className="text-4xl lg:text-5xl font-bold mb-6 bg-gradient-to-r from-primary via-accent-blue to-accent-purple bg-clip-text text-transparent animated-gradient">
+      <div className="container mx-auto px-4 sm:px-6 relative z-10">
+        <div className="text-center mb-12 sm:mb-16">
+          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold mb-6 bg-gradient-to-r from-primary via-accent-cyan to-accent-purple bg-clip-text text-transparent animated-gradient">
             Tech Stack
           </h2>
           <div className="w-24 h-1 bg-primary-gradient mx-auto rounded-full mb-4 pulse-glow"></div>
-          <p className="text-muted-foreground text-lg max-w-2xl mx-auto">
+          <p className="text-muted-foreground text-base sm:text-lg max-w-2xl mx-auto px-4">
             Technologies and tools I work with to bring ideas to life
           </p>
         </div>
