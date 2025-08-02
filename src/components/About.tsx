@@ -19,22 +19,7 @@ const About = () => {
         <div className="grid md:grid-cols-2 gap-12 items-center">
           <div className="space-y-6">
             <p className="text-lg text-muted-foreground leading-relaxed">
-              I'm a passionate Computer Science Engineering student at 
-              <span className="text-primary-glow font-semibold"> Devbhoomi Uttarakhand University</span> 
-              (2022-2026), driven by curiosity and powered by code.
-            </p>
-            
-            <p className="text-lg text-muted-foreground leading-relaxed">
-              My journey in technology spans across multiple domains, from crafting 
-              intelligent machine learning models to building seamless web applications. 
-              I specialize in emotion detection systems, computer vision, and modern 
-              web development frameworks.
-            </p>
-            
-            <p className="text-lg text-muted-foreground leading-relaxed">
-              When I'm not coding, you'll find me exploring the latest developments 
-              in Generative AI and Large Language Models, always eager to learn and 
-              implement cutting-edge technologies in real-world applications.
+              I'm a passionate Computer Science explorer, driven by curiosity and a love for building impactful solutions. Proficient in the MERN stack and modern databases, I create full-stack applications that are both dynamic and efficient. My journey extends into Machine Learning, Generative AI, and Large Language Models where I enjoy experimenting with intelligent systems that solve real-world problems. I'm also skilled in transforming raw data into meaningful insights, using structured logic and analytical tools. With a strong foundation in DSA and an eagerness to stay ahead of the curve, I strive to code with purpose, creativity, and continuous growth in mind.
             </p>
           </div>
           

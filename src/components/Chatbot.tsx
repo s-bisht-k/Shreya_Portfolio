@@ -28,7 +28,7 @@ const Chatbot = () => {
   const portfolioInfo = {
     skills: "Shreya specializes in Machine Learning, Computer Vision, Web Development, Python, JavaScript, TensorFlow, OpenCV, and more.",
     projects: "Key projects include Hyogen (emotion detection system) and SmartDerma (skin disease classifier using AI).",
-    education: "B.Tech in CSE from Devbhoomi Uttarakhand University (2022-2026) with 8.68/10 GPA.",
+    education: "B.Tech in CSE from Devbhoomi Uttarakhand University (2022-2026) with 8.12/10 GPA.",
     contact: "Email: shreyabisht20092004@gmail.com, Phone: +91 7668148243",
     interests: "Passionate about Generative AI, LLMs, Machine Learning, and building impactful tech solutions."
   };

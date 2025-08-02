@@ -33,7 +33,7 @@ const Education = () => {
                     <div className="text-right mt-4 lg:mt-0">
                       <div className="inline-flex items-center gap-2 bg-primary/20 px-4 py-2 rounded-lg">
                         <Award className="w-5 h-5 text-primary-glow" />
-                        <span className="text-lg font-bold text-primary-glow">8.68/10 GPA</span>
+                        <span className="text-lg font-bold text-primary-glow">8.12/10 GPA</span>
                       </div>
                       <p className="text-muted-foreground mt-2">2022 - 2026</p>
                     </div>
@@ -55,8 +55,8 @@ const Education = () => {
                           <p className="text-sm text-muted-foreground">DBMS</p>
                         </div>
                         <div className="bg-secondary/30 px-4 py-3 rounded-lg border border-border">
-                          <p className="font-medium text-foreground">Design & Analysis of Algorithms</p>
-                          <p className="text-sm text-muted-foreground">DAA</p>
+                          <p className="font-medium text-foreground">Generative AI</p>
+                          <p className="text-sm text-muted-foreground">Gen AI</p>
                         </div>
                       </div>
                     </div>
