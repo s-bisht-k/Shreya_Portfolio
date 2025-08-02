@@ -177,7 +177,7 @@
   .animated-gradient {
     background: var(--primary-gradient);
     background-size: 200% 200%;
-    animation: gradient-shift 8s ease infinite;
+    animation: gradient-shift 20s ease infinite;
   }
 
   @keyframes gradient-shift {
@@ -219,17 +219,17 @@
 
   @keyframes float {
     0%, 100% { transform: translateY(0px); }
-    50% { transform: translateY(-20px); }
+    50% { transform: translateY(-15px); }
   }
 
   /* Slower Pulse glow effect */
   .pulse-glow {
-    animation: pulse-glow 8s ease-in-out infinite alternate;
+    animation: pulse-glow 12s ease-in-out infinite alternate;
   }
 
   @keyframes pulse-glow {
-    from { box-shadow: 0 0 20px hsl(260 80% 65% / 0.4); }
-    to { box-shadow: 0 0 40px hsl(260 80% 65% / 0.8); }
+    from { box-shadow: 0 0 15px hsl(260 80% 65% / 0.3); }
+    to { box-shadow: 0 0 30px hsl(260 80% 65% / 0.6); }
   }
 
   /* Smooth reveal animations */

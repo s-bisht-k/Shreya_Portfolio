@@ -1,6 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { Download, Mail, ExternalLink } from "lucide-react";
-import profileImage from "@/assets/shreya-profile-transparent.png";
+import profileImage from "@/assets/shreya-profile-new.jpg";
 
 const Hero = () => {
   return (
@@ -69,7 +69,7 @@ const Hero = () => {
           {/* Cinematic Profile Image */}
           <div className="flex-shrink-0">
             <div className="relative group">
-              <div className="w-64 h-64 sm:w-80 sm:h-80 lg:w-96 lg:h-96 rounded-3xl overflow-hidden glass-card hover-float group mx-auto">
+              <div className="w-64 h-64 sm:w-80 sm:h-80 lg:w-96 lg:h-96 rounded-full overflow-hidden glass-card hover-float group mx-auto">
                 <img 
                   src={profileImage} 
                   alt="Shreya Bisht" 
