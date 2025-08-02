@@ -79,8 +79,8 @@ const Navigation = () => {
 
         {/* Mobile Navigation */}
         {isOpen && (
-          <div className="md:hidden">
-            <div className="px-2 pt-2 pb-3 space-y-1 bg-background/95 backdrop-blur-xl rounded-lg mt-2 border border-border/50">
+          <div className="md:hidden absolute top-full left-0 right-0 mt-2">
+            <div className="mx-4 px-2 pt-2 pb-3 space-y-1 bg-background/95 backdrop-blur-xl rounded-lg border border-border/50">
               {navItems.map((item) => (
                 <button
                   key={item.name}

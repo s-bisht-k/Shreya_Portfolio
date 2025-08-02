@@ -16,63 +16,63 @@ const Hero = () => {
       <div className="absolute bottom-32 left-32 w-6 h-6 bg-primary rounded-full opacity-40 float-animation" style={{animationDelay: '3s'}}></div>
       <div className="absolute top-1/3 right-1/4 w-4 h-4 bg-accent-purple rounded-full opacity-50 float-animation" style={{animationDelay: '4s'}}></div>
       
-      <div className="container mx-auto px-6 relative z-10">
+      <div className="container mx-auto px-4 sm:px-6 relative z-10">
         <div className="flex flex-col lg:flex-row items-center gap-8 lg:gap-20">
           {/* Text Content */}
-          <div className="flex-1 text-center lg:text-left">
-            <h1 className="text-5xl sm:text-6xl lg:text-8xl font-bold mb-6 bg-gradient-to-r from-foreground via-primary-glow to-accent-cyan bg-clip-text text-transparent">
+          <div className="flex-1 text-center lg:text-left order-2 lg:order-1">
+            <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-bold mb-4 sm:mb-6 bg-gradient-to-r from-foreground via-primary-glow to-accent-cyan bg-clip-text text-transparent">
               Shreya Bisht
             </h1>
-            <div className="text-xl sm:text-2xl lg:text-3xl text-muted-foreground mb-6 space-y-2">
+            <div className="text-lg sm:text-xl md:text-2xl lg:text-3xl text-muted-foreground mb-4 sm:mb-6 space-y-1 sm:space-y-2">
               <p className="text-primary-glow font-semibold">Software Engineer</p>
               <p className="text-accent-cyan font-semibold">Machine Learning Engineer</p>
             </div>
-            <p className="text-base sm:text-lg text-muted-foreground mb-8 max-w-2xl leading-relaxed px-4 lg:px-0">
+            <p className="text-sm sm:text-base lg:text-lg text-muted-foreground mb-6 sm:mb-8 max-w-2xl leading-relaxed px-2 lg:px-0 mx-auto lg:mx-0">
               Passionate Computer Science student building innovative solutions with 
               Machine Learning, Web Development, and AI. Turning ideas into impactful 
               digital experiences through code and creativity.
             </p>
             
             {/* Cinematic Action Buttons */}
-            <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start px-4 lg:px-0">
+            <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center lg:justify-start px-2 lg:px-0">
               <Button 
                 variant="hero" 
                 size="lg" 
-                className="group relative overflow-hidden"
+                className="group relative overflow-hidden w-full sm:w-auto"
                 onClick={() => window.open('https://drive.google.com/drive/folders/1M2w1B12Hei3AHXGINHLogJNd1TndXl_l', '_blank')}
               >
-                <Download className="w-5 h-5 relative z-10" />
+                <Download className="w-4 h-4 sm:w-5 sm:h-5 relative z-10" />
                 <span className="relative z-10">Download CV</span>
               </Button>
               <Button 
                 variant="glow" 
                 size="lg"
-                className="glass-button"
+                className="glass-button w-full sm:w-auto"
                 onClick={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })}
               >
-                <Mail className="w-5 h-5" />
+                <Mail className="w-4 h-4 sm:w-5 sm:h-5" />
                 Contact Me
               </Button>
               <Button 
                 variant="ghost" 
                 size="lg"
-                className="glass-button border-primary/30 hover:border-primary/60"
+                className="glass-button border-primary/30 hover:border-primary/60 w-full sm:w-auto"
                 onClick={() => document.getElementById('projects')?.scrollIntoView({ behavior: 'smooth' })}
               >
-                <ExternalLink className="w-5 h-5" />
+                <ExternalLink className="w-4 h-4 sm:w-5 sm:h-5" />
                 View Projects
               </Button>
             </div>
           </div>
           
           {/* 3D Profile Image */}
-          <div className="flex-shrink-0">
+          <div className="flex-shrink-0 order-1 lg:order-2 mb-6 lg:mb-0">
             <div className="relative group perspective-1000">
-              <div className="w-64 h-64 sm:w-80 sm:h-80 lg:w-96 lg:h-96 rounded-full overflow-hidden glass-card group mx-auto transform-3d hover:rotate-y-12 hover:rotate-x-6 transition-all duration-700 ease-cinematic shadow-3d">
+              <div className="w-56 h-56 sm:w-72 sm:h-72 md:w-80 md:h-80 lg:w-96 lg:h-96 rounded-full overflow-hidden glass-card group mx-auto transform-3d hover:rotate-y-12 hover:rotate-x-6 transition-all duration-700 ease-cinematic shadow-3d">
                 <img 
                   src={profileImage} 
                   alt="Shreya Bisht" 
-                  className="w-full h-full object-cover object-center transform group-hover:scale-110 transition-all duration-700 ease-cinematic filter brightness-110 contrast-110"
+                  className="w-full h-full object-cover object-center scale-110 transform group-hover:scale-125 transition-all duration-700 ease-cinematic filter brightness-110 contrast-110"
                 />
                 <div className="absolute inset-0 bg-primary-gradient opacity-0 group-hover:opacity-20 transition-opacity duration-500"></div>
                 <div className="absolute inset-0 rounded-full border-2 border-primary/30 group-hover:border-primary/60 transition-colors duration-500"></div>

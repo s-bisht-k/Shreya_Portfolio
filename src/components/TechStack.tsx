@@ -48,56 +48,54 @@ const TechStack = () => {
       <div className="absolute bottom-10 left-20 w-24 h-24 bg-primary/10 rounded-full blur-xl float-animation" style={{animationDelay: '3s'}}></div>
       
       <div className="container mx-auto px-4 sm:px-6 relative z-10">
-        <div className="text-center mb-12 sm:mb-16">
-          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold mb-6 bg-gradient-to-r from-primary via-accent-cyan to-accent-purple bg-clip-text text-transparent animated-gradient">
+        <div className="text-center mb-8 sm:mb-12 lg:mb-16">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold mb-4 sm:mb-6 bg-gradient-to-r from-primary via-accent-cyan to-accent-purple bg-clip-text text-transparent animated-gradient">
             Tech Stack
           </h2>
-          <div className="w-24 h-1 bg-primary-gradient mx-auto rounded-full mb-4 pulse-glow"></div>
-          <p className="text-muted-foreground text-base sm:text-lg max-w-2xl mx-auto px-4">
+          <div className="w-16 sm:w-20 md:w-24 h-1 bg-primary-gradient mx-auto rounded-full mb-3 sm:mb-4 pulse-glow"></div>
+          <p className="text-muted-foreground text-sm sm:text-base lg:text-lg max-w-2xl mx-auto px-2 sm:px-4">
             Technologies and tools I work with to bring ideas to life
           </p>
         </div>
         
-        <div className="space-y-12">
+        <div className="space-y-8 sm:space-y-12">
           {categories.map((category) => (
-            <div key={category.name} className="space-y-6">
+            <div key={category.name} className="space-y-4 sm:space-y-6">
               <div className="flex items-center gap-4">
-                <div className={`px-4 py-2 rounded-xl ${category.color} font-semibold backdrop-blur-sm glass-card border-0`}>
+                <div className={`px-3 sm:px-4 py-2 rounded-xl ${category.color} font-semibold backdrop-blur-sm glass-card border-0 text-sm sm:text-base`}>
                   {category.name}
                 </div>
                 <div className="flex-1 h-px bg-gradient-to-r from-transparent via-border to-transparent"></div>
               </div>
               
-                <div className="relative overflow-hidden">
-                  <div className="flex gap-3 animate-slide-infinite">
-                    {technologies
-                      .filter((tech) => tech.category === category.name)
-                      .concat(technologies.filter((tech) => tech.category === category.name))
-                      .map((tech, index) => (
-                        <Badge 
-                          key={`${tech.name}-${index}`} 
-                          variant="tech" 
-                          className="text-sm py-3 px-5 cursor-pointer glass-card transition-all duration-300 flex-shrink-0 min-w-fit"
-                        >
-                          <img 
-                            src={tech.icon} 
-                            alt={tech.name}
-                            className="w-6 h-6 mr-3"
-                            onError={(e) => {
-                              e.currentTarget.style.display = 'none';
-                            }}
-                          />
+                <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-4 sm:gap-6">
+                  {technologies
+                    .filter((tech) => tech.category === category.name)
+                    .map((tech, index) => (
+                      <div
+                        key={tech.name}
+                        className="group flex flex-col items-center p-4 sm:p-6 glass-card rounded-xl hover:scale-110 hover:shadow-2xl transition-all duration-300 cursor-pointer"
+                      >
+                        <img 
+                          src={tech.icon} 
+                          alt={tech.name}
+                          className="w-12 h-12 sm:w-16 sm:h-16 md:w-20 md:h-20 mb-3 group-hover:scale-110 transition-transform duration-300"
+                          onError={(e) => {
+                            e.currentTarget.style.display = 'none';
+                          }}
+                        />
+                        <span className="text-xs sm:text-sm font-medium text-center group-hover:text-primary transition-colors duration-300">
                           {tech.name}
-                        </Badge>
-                      ))}
-                  </div>
+                        </span>
+                      </div>
+                    ))}
                 </div>
             </div>
           ))}
         </div>
         
-        <div className="mt-16 text-center">
-          <p className="text-muted-foreground">
+        <div className="mt-12 sm:mt-16 text-center">
+          <p className="text-muted-foreground text-sm sm:text-base">
             Always learning and exploring new technologies to stay current with industry trends
           </p>
         </div>
