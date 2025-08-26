@@ -2,7 +2,7 @@ import { useState, useRef, useEffect } from "react";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
-import { MessageCircle, Send, X, Bot, User, Minimize2 } from "lucide-react";
+import { MessageCircle, Send, X, Cpu, User, Minimize2 } from "lucide-react";
 
 const Chatbot = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -88,7 +88,7 @@ const Chatbot = () => {
               borderRadius: '50% 50% 50% 50% / 60% 60% 40% 40%'
             }}
           >
-            <Bot className="w-5 h-5 text-blue-800 group-hover:scale-110 transition-transform" />
+            <Cpu className="w-5 h-5 text-blue-800 group-hover:scale-110 transition-transform" />
           </Button>
           <div className="absolute -top-1 left-1/2 transform -translate-x-1/2 bg-white/90 backdrop-blur-sm rounded-full px-2 py-1 text-[10px] font-semibold text-blue-800 shadow-sm border border-blue-200">
             Shreya's AI
@@ -104,7 +104,7 @@ const Chatbot = () => {
         <CardHeader className="p-3 sm:p-4 pb-2">
           <div className="flex items-center justify-between">
             <CardTitle className="text-sm sm:text-lg font-semibold text-foreground flex items-center gap-2">
-              <Bot className="w-4 h-4 sm:w-5 sm:h-5 text-primary-glow" />
+              <Cpu className="w-4 h-4 sm:w-5 sm:h-5 text-primary-glow" />
               <span className="hidden sm:inline">Shreya's AI Assistant</span>
               <span className="sm:hidden">Shreya's AI</span>
             </CardTitle>
@@ -139,7 +139,7 @@ const Chatbot = () => {
                 >
                   {message.role === "assistant" && (
                     <div className="w-6 h-6 sm:w-8 sm:h-8 bg-primary/20 rounded-full flex items-center justify-center flex-shrink-0">
-                      <Bot className="w-3 h-3 sm:w-4 sm:h-4 text-primary-glow" />
+                       <Cpu className="w-3 h-3 sm:w-4 sm:h-4 text-primary-glow" />
                     </div>
                   )}
                   <div
@@ -161,7 +161,7 @@ const Chatbot = () => {
               {isLoading && (
                 <div className="flex gap-2 sm:gap-3">
                   <div className="w-6 h-6 sm:w-8 sm:h-8 bg-primary/20 rounded-full flex items-center justify-center">
-                    <Bot className="w-3 h-3 sm:w-4 sm:h-4 text-primary-glow" />
+                    <Cpu className="w-3 h-3 sm:w-4 sm:h-4 text-primary-glow" />
                   </div>
                   <div className="bg-secondary/50 border border-border p-2 sm:p-3 rounded-lg">
                     <div className="flex gap-1">
