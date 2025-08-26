@@ -80,17 +80,20 @@ const Chatbot = () => {
   if (!isOpen) {
     return (
       <div className="fixed bottom-4 right-4 sm:bottom-6 sm:right-6 z-50">
-        <Button
-          onClick={() => setIsOpen(true)}
-          variant="hero"
-          size="lg"
-          className="rounded-full shadow-glow w-14 h-14 sm:w-16 sm:h-16 p-0"
-        >
-          <div className="flex flex-col items-center">
-            <Bot className="w-5 h-5 sm:w-6 sm:h-6" />
-            <span className="text-xs font-medium mt-1 hidden sm:block">Shreya's AI</span>
+        <div className="relative">
+          <Button
+            onClick={() => setIsOpen(true)}
+            className="bg-gradient-to-r from-blue-400 via-blue-300 to-blue-200 hover:from-blue-500 hover:via-blue-400 hover:to-blue-300 shadow-lg hover:shadow-xl transition-all duration-300 group border-2 border-blue-200 w-20 h-16 p-0"
+            style={{
+              borderRadius: '50% 50% 50% 50% / 60% 60% 40% 40%'
+            }}
+          >
+            <Bot className="w-5 h-5 text-blue-800 group-hover:scale-110 transition-transform" />
+          </Button>
+          <div className="absolute -top-1 left-1/2 transform -translate-x-1/2 bg-white/90 backdrop-blur-sm rounded-full px-2 py-1 text-[10px] font-semibold text-blue-800 shadow-sm border border-blue-200">
+            Shreya's AI
           </div>
-        </Button>
+        </div>
       </div>
     );
   }
