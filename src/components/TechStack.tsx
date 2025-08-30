@@ -21,7 +21,7 @@ const TechStack = () => {
     { name: "Tailwind CSS", category: "Web", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tailwindcss/tailwindcss-original.svg" },
     
     // Tools & Version Control
-    { name: "GitHub", category: "Tools", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original-wordmark.svg" },
+    { name: "GitHub", category: "Tools", icon: "https://cdn-icons-png.flaticon.com/512/733/733609.png" },
     { name: "Git", category: "Tools", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg" },
     { name: "VS Code", category: "Tools", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vscode/vscode-original.svg" },
     { name: "Google Colab", category: "Tools", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/google/google-original.svg" },
