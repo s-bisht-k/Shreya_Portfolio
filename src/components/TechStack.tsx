@@ -1,4 +1,5 @@
 import { Badge } from "@/components/ui/badge";
+import githubLogo from "@/assets/github-logo-charismatic.png";
 
 const TechStack = () => {
   const technologies = [
@@ -20,7 +21,7 @@ const TechStack = () => {
     { name: "Tailwind CSS", category: "Web", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tailwindcss/tailwindcss-original.svg" },
     
     // Tools & Version Control
-    { name: "GitHub", category: "Tools", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg" },
+    { name: "GitHub", category: "Tools", icon: githubLogo },
     
     { name: "VS Code", category: "Tools", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vscode/vscode-original.svg" },
     { name: "Google Colab", category: "Tools", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/google/google-original.svg" },
