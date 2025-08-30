@@ -2,6 +2,9 @@ import { Button } from "@/components/ui/button";
 import { Download, Mail, ExternalLink } from "lucide-react";
 import { useState, useEffect } from "react";
 import profileImage from "@/assets/shreya-profile-new.jpg";
+import astronaut1 from "@/assets/cute-astronaut-1.png";
+import astronaut2 from "@/assets/cute-astronaut-2.png";
+import astronaut3 from "@/assets/cute-astronaut-3.png";
 
 const Hero = () => {
   const titles = [
@@ -55,6 +58,23 @@ const Hero = () => {
       <div className="absolute top-32 right-32 w-8 h-8 bg-accent-blue rounded-full opacity-60 float-animation" style={{animationDelay: '1s'}}></div>
       <div className="absolute bottom-32 left-32 w-6 h-6 bg-primary rounded-full opacity-40 float-animation" style={{animationDelay: '3s'}}></div>
       <div className="absolute top-1/3 right-1/4 w-4 h-4 bg-accent-purple rounded-full opacity-50 float-animation" style={{animationDelay: '4s'}}></div>
+      
+      {/* Cute floating astronauts */}
+      <div className="absolute top-20 left-16 w-12 h-12 float-animation opacity-80" style={{animationDelay: '0.5s'}}>
+        <img src={astronaut1} alt="Cute astronaut" className="w-full h-full object-contain" />
+      </div>
+      <div className="absolute top-2/3 right-12 w-10 h-10 float-animation opacity-75" style={{animationDelay: '2.5s'}}>
+        <img src={astronaut2} alt="Cute astronaut waving" className="w-full h-full object-contain" />
+      </div>
+      <div className="absolute bottom-24 left-1/4 w-8 h-8 float-animation opacity-70" style={{animationDelay: '4.5s'}}>
+        <img src={astronaut3} alt="Cute astronaut with rocket" className="w-full h-full object-contain" />
+      </div>
+      <div className="absolute top-1/2 left-8 w-6 h-6 float-animation opacity-60" style={{animationDelay: '1.5s'}}>
+        <img src={astronaut1} alt="Cute astronaut" className="w-full h-full object-contain" />
+      </div>
+      <div className="absolute bottom-1/3 right-1/3 w-7 h-7 float-animation opacity-65" style={{animationDelay: '3.5s'}}>
+        <img src={astronaut2} alt="Cute astronaut waving" className="w-full h-full object-contain" />
+      </div>
       
       <div className="container mx-auto px-4 sm:px-6 relative z-10">
         <div className="flex flex-col lg:flex-row items-center gap-8 lg:gap-20">
